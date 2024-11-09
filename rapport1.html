@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير الزيارة التربوية</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo">
+    <div id="titrep">
+        <h1>Grille d’observation de l’Educateur</h1>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- Rubrique 1 -->
+    <h1 id="titre2">Rubrique 1 : Performance de l’éducateur (trice)</h1>
+    <div class="educateur">
+        <h3>Educateur (trice)</h3>
+        <input type="text">
+
+        <h3>Date de visite d’observation</h3>
+        <input type="date">
+
+        <h3>Heure de visite</h3>
+        <input type="time">
+
+        <h3>Province</h3>
+        <input type="text">
+
+        <h3>Commune</h3>
+        <input type="text">
+
+        <h3>Douar</h3>
+        <input type="text">
+
+        <h3>Unité/Ecole</h3>
+        <input type="text">
+    </div>
+
+    <!-- Comportements et Qualités personnels -->
+    <h2 class="section-title">Comportements et Qualités personnels*</h2>
+    <div class="mt">
+        <div class="radio">
+            <h3>Etre présentable</h3>
+            <input type="radio" name="edu1" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu1" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu1" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Être vigilant et bienveillant</h3>
+            <input type="radio" name="edu2" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu2" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu2" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Avoir le sens de l’écoute</h3>
+            <input type="radio" name="edu3" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu3" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu3" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Collaborer efficacement</h3>
+            <input type="radio" name="edu4" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu4" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu4" value="mt-no"><label>insatisfaisant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+
+        <div class="radio">
+            <h3>Horaires, présence avec les enfants, discussion avec les collègues, utilisation de téléphone</h3>
+            <input type="radio" name="edu5" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu5" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu5" value="mt-no"><label>insatisfaisant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+
+    <!-- Interaction avec les enfants -->
+    <h2 class="section-title">Interaction avec les enfants*</h2>
+    <div class="interaction">
+        <div class="radio">
+            <h3>Faire preuve de disponibilité auprès des enfants</h3>
+            <input type="radio" name="edu6" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu6" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu6" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>S’exprimer avec aisance (et ton agréable)</h3>
+            <input type="radio" name="edu7" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu7" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu7" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Utilise une langue appropriée au niveau des enfants</h3>
+            <input type="radio" name="edu8" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu8" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu8" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Encourager les enfants et valoriser leurs travaux</h3>
+            <input type="radio" name="edu9" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu9" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu9" value="mt-no"><label>insatisfaisant</label>
+        </div>
+
+        <div class="radio">
+            <h3>Assurer aux enfants, en tout temps, un environnement sécurisé</h3>
+            <input type="radio" name="edu10" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edu10" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edu10" value="mt-no"><label>insatisfaisant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+
+    <!-- Maitrise des pratiques professionnelles -->
+    <h2 class="section-title">Maitrise des pratiques professionnelles*</h2>
+    <div class="pratiques">
+        <div class="radio">
+            <h3>Variation et utilisation des supports et outils didactiques</h3>
+            <input type="radio" name="edua" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edua" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edua" value="mt-no"><label>insatisfaisant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+
+        <div class="radio">
+            <h3>Animation des différents groupes de travail (autonome/dirigé/libre)</h3>
+            <input type="radio" name="edub" value="mt-oui"><label>Bon</label>
+            <input type="radio" name="edub" value="mt-am"><label>A améliorer</label>
+            <input type="radio" name="edub" value="mt-no"><label>insatisfaisant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+
+    <!-- Les outils de l’éducateur -->
+    <h2 class="section-title">Les outils de l’éducateur*</h2>
+    <div class="outils">
+        <div class="radio">
+            <h3>Cahier journal</h3>
+            <input type="radio" name="cj" value="dm-oui"><label>Assimilé</label>
+            <input type="radio" name="cj" value="dm-no"><label>Exploités</label>
+        </div>
+
+        <div class="radio">
+            <h3>Emploi du temps</h3>
+            <input type="radio" name="et" value="dm-oui"><label>Assimilé</label>
+            <input type="radio" name="et" value="dm-no"><label>Exploités</label>
+        </div>
+
+        <div class="radio">
+            <h3>Fiche pédagogique</h3>
+            <input type="radio" name="fp" value="dm-oui"><label>Assimilé</label>
+            <input type="radio" name="fp" value="dm-no"><label>Exploités</label>
+        </div>
+    </div>
+
+    <!-- Rubrique 2 -->
+    <h1>Rubrique 2 : Organisation de la classe*</h1>
+    <!-- Coins de la classe -->
+    <h2>Coins de la classe*Coins permanents*</h2>
+
+    <div class="coins-permanents">
+        <div class="radio">
+            <h3>Coin regroupement</h3>
+            <input type="radio" name="cr" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cr" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cr" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Coin jeux</h3>
+            <input type="radio" name="cj" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cj" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cj" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Coin bibliothèque</h3>
+            <input type="radio" name="cb" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cb" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cb" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Coin peinture</h3>
+            <input type="radio" name="cp" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cp" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cp" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Espace d’activité</h3>
+            <input type="radio" name="ed" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="ed" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="ed" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+            <h5>Observation</h5>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+    
+    <h2>Coins temporaires</h2>
+    <div class="coins-temporaires">
+        <div class="radio">
+            <h3>Coin de projet</h3>
+            <input type="radio" name="cpr" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cpr" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cpr" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    
+        <div class="radio">
+            <h3>Coin de bibliothèque</h3>
+            <input type="radio" name="cb_temp" value="dm-oui"><label>Existant</label>
+            <input type="radio" name="cb_temp" value="dm-no"><label>Non existant</label>
+            <input type="radio" name="cb_temp" value="dm-noo"><label>Sont-ils utilisés par les enfants</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+    <h2>Affichages de la classe*</h2>
+
+    <h3>Affichages didactiques</h3>
+    <div class="affichages-didactiques">
+        <div class="radio">
+            <h3>Affichage de présence</h3>
+            <input type="radio" name="presence" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="presence" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="presence" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Calendrier (date)</h3>
+            <input type="radio" name="calendrier" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="calendrier" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="calendrier" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Météo</h3>
+            <input type="radio" name="meteo" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="meteo" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="meteo" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Affichage de responsabilité</h3>
+            <input type="radio" name="responsabilite" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="responsabilite" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="responsabilite" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Règles de vie</h3>
+            <input type="radio" name="regles" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="regles" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="regles" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Affichage des saisons</h3>
+            <input type="radio" name="saisons" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="saisons" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="saisons" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Affichage des formes géométriques</h3>
+            <input type="radio" name="formes" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="formes" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="formes" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Affichage des couleurs</h3>
+            <input type="radio" name="couleurs" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="couleurs" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="couleurs" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Bande numérique</h3>
+            <input type="radio" name="numerique" value="mt-oui"><label>Sont-ils lisibles pour les enfants</label>
+            <input type="radio" name="numerique" value="mt-am"><label>Sont-ils à la hauteur des enfants</label>
+            <input type="radio" name="numerique" value="mt-no"><label>Sont-ils exploités avec les enfants</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+    
+    <h3>Affichages institutionnels</h3>
+    <div class="affichages-institutionnels">
+        <div class="radio">
+            <h3>Répartition annuelle</h3>
+            <input type="radio" name="repartition" value="mt-oui"><label>Existant</label>
+            <input type="radio" name="repartition" value="mt-am"><label>Non existant</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Liste des enfants</h3>
+            <input type="radio" name="liste-enfants" value="mt-oui"><label>Existant</label>
+            <input type="radio" name="liste-enfants" value="mt-am"><label>Non existant</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Liste des évènements</h3>
+            <input type="radio" name="evenements" value="mt-oui"><label>Existant</label>
+            <input type="radio" name="evenements" value="mt-am"><label>Non existant</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Liste des enfants inscrits au service d’école</h3>
+            <input type="radio" name="inscrits" value="mt-oui"><label>Existant</label>
+            <input type="radio" name="inscrits" value="mt-am"><label>Non existant</label>
+            <textarea placeholder="Observation"></textarea>
+        </div>
+    </div>
+    
+    <h2>Organisation des moments de la journée*</h2>
+    <div class="organisation-moments">
+        <div class="radio">
+            <h3>Garde</h3>
+            <input type="radio" name="garde" value="mt-oui"><label>Réalisé</label>
+            <input type="radio" name="garde" value="mt-am"><label>Durée respectée</label>
+            <input type="radio" name="garde" value="mt-no"><label>Séance bien Animée (implication des enfants/utilisation des outils)</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Accueil</h3>
+            <input type="radio" name="accueil" value="mt-oui"><label>Réalisé</label>
+            <input type="radio" name="accueil" value="mt-am"><label>Durée respectée</label>
+            <input type="radio" name="accueil" value="mt-no"><label>Séance bien Animée (implication des enfants/utilisation des outils)</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Rituel</h3>
+            <input type="radio" name="rituel" value="mt-oui"><label>Réalisé</label>
+            <input type="radio" name="rituel" value="mt-am"><label>Durée respectée</label>
+            <input type="radio" name="rituel" value="mt-no"><label>Séance bien Animée (implication des enfants/utilisation des outils)</label>
+        </div>
+    
+        <div class="radio">
+            <h3>E.P.S</h3>
+            <input type="radio" name="eps" value="mt-oui"><label>Réalisé</label>
+            <input type="radio" name="eps" value="mt-am"><label>Durée respectée</label>
+            <input type="radio" name="eps" value="mt-no"><label>Séance bien Animée (implication des enfants/utilisation des outils)</label>
+        </div>
+    
+        <div class="radio">
+            <h3>Passage aux toilettes/ récréation</h3>
+            <input type="radio" name="toilettes" value="mt-oui"><label>Réalisé</label>
+            <input type="radio" name="toilettes" value="mt-am"><label>Durée respectée</label>
+            <input type="radio" name="toilettes" value="mt-no"><label>Séance bien Animée (implication des enfants/utilisation des outils)</label>
+        </div>
+            <div class="radio">
+                <h3>Activités de groupe</h3>
+                <input type="radio" id="activites-realise" name="activites" value="mt-oui">
+                <label for="activites-realise">Réalisé</label>
+                <input type="radio" id="activites-duree" name="activites" value="mt-am">
+                <label for="activites-duree">Durée respectée</label>
+                <input type="radio" id="activites-animee" name="activites" value="mt-no">
+                <label for="activites-animee">Séance bien Animée (implication des enfants/utilisation des outils)</label>
+            </div>
+            
+            <div class="radio">
+                <h3>Bilan</h3>
+                <input type="radio" id="bilan-realise" name="bilan" value="mt-oui">
+                <label for="bilan-realise">Réalisé</label>
+                <input type="radio" id="bilan-duree" name="bilan" value="mt-am">
+                <label for="bilan-duree">Durée respectée</label>
+                <input type="radio" id="bilan-animee" name="bilan" value="mt-no">
+                <label for="bilan-animee">Séance bien Animée (implication des enfants/utilisation des outils)</label>
+                <textarea placeholder="Observation"></textarea>
+            </div>
+        
+    </div>
+</div>
+
+<button id="downloadPDF">تحميل PDF</button>
+
+
+
+
+<style>
+
+
+    /* إعدادات عامة للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #141e30, #243b55);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Readex Pro', sans-serif;
+}
+h2{
+    color: #ffd700;
+}
+
+h3{
+    color: orangered;
+}
+h5{
+    color: #ffd700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+
+/* تنسيق الهيدر */
+header {
+    background-color: #0f1626;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    color: #76ff03;
+}
+header img {
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* تنسيق العناوين الرئيسية */
+h1 {
+    font-size: 2em;
+    color: #2600ff;
+}
+.educateur input{
+   width:800px;
+   height: 40px;
+}
+
+/* حاوية المحتوى */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 80px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* تنسيق كل class */
+.educateur, .mt, .up, .cote, .enfant, .radio  {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+}
+#ad{
+    color: orchid;
+}
+
+
+.b input{
+    text-align: center !important;
+}
+.c input{
+    text-align: center !important;
+}
+.radio input numbre{
+    padding: 25px;
+    margin: 80px;
+}
+/* تنسيق لـ textarea */
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    background: #edeef0;
+    color: #000;
+    font-size: 1.1em;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    height: 80px;
+    resize: none;
+    text-align: center;
+}
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* تنسيق زر التحميل */
+#downloadPDF {
+    background-color: #ffd700;
+    color: #000;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+#downloadPDF:hover {
+    background-color: #ffeb3b;
+}
+
+/* إعدادات إضافية للشاشات الصغيرة */
+@media (max-width: 600px) {
+    header img {
+        width: 100px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+</style>
+<script>
+document.getElementById('downloadPDF').addEventListener('click', function () {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // إعدادات الصفحة
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    let y = 20; // الموضع الرأسي لبدء النصوص
+    const titleX = 10; // الهامش الأفقي
+    const titleSpacing = 8; // تقليل التباعد بين السطور
+    const fieldSpacing = 10; // المسافة بين الحقول
+
+    // دالة لتقسيم النص الطويل إلى عدة أسطر لتجنب التداخل
+    function splitTextToFitWidth(text, maxWidth) {
+        return doc.splitTextToSize(text, maxWidth);
+    }
+
+    // دالة لإضافة العنوان الرئيسي `h1` بخط Times مع إطار
+    function addMainTitle(title) {
+        doc.setFont("times", "bold");
+        doc.setFontSize(24);
+        doc.setTextColor(0, 0, 255); // لون أزرق فاتح
+        doc.setDrawColor(0, 0, 0); // لون إطار أسود
+
+        // رسم الإطار حول العنوان
+        doc.rect(5, y - 10, pageWidth - 10, 20);
+        
+        const splitTitle = splitTextToFitWidth(title, pageWidth - 20);
+        splitTitle.forEach((line, index) => {
+            doc.text(line, pageWidth / 2, y + (index * titleSpacing), { align: 'center' });
+        });
+        y += (splitTitle.length * titleSpacing) + 15;
+    }
+
+    // دالة لإضافة العناوين الفرعية `h2` بخط Times
+    function addH2Title(title) {
+        doc.setFont("times", "bolditalic");
+        doc.setFontSize(18);
+        doc.setTextColor(128, 0, 128); // لون بنفسجي
+
+        const splitTitle = splitTextToFitWidth(title, pageWidth - 20);
+        splitTitle.forEach((line, index) => {
+            doc.text(line, pageWidth / 2, y + (index * titleSpacing), { align: 'center' });
+        });
+        y += (splitTitle.length * titleSpacing) + 10;
+    }
+
+    // دالة لإضافة عنوان `h3` بالخط المائل بخط Times
+    function addH3Title(title) {
+        doc.setFont("times", "italic");
+        doc.setFontSize(14);
+        doc.setTextColor(0, 0, 0); // لون أسود
+
+        const splitTitle = splitTextToFitWidth(title + ":", pageWidth - 40);
+        splitTitle.forEach((line, index) => {
+            doc.text(line, titleX, y + (index * titleSpacing));
+        });
+        y += (splitTitle.length * titleSpacing);
+    }
+
+    // دالة لإضافة إجابة الحقول وضبطها داخل الصفحة
+    function addFieldValue(value) {
+        doc.setFont("times", "normal");
+        doc.setFontSize(14);
+        doc.setTextColor(0, 0, 255); // لون أزرق
+
+        // تقسيم النص لضمان عدم تجاوز حدود الصفحة
+        const splitValue = splitTextToFitWidth(value, pageWidth - 100); // ترك مسافة كافية من اليمين
+        splitValue.forEach((line, index) => {
+            doc.text(line, titleX + 100, y + (index * titleSpacing) - titleSpacing + 4); // محاذاة مع العنوان
+        });
+        y += (splitValue.length * titleSpacing);
+
+        // التحقق من تجاوز الصفحة وإضافة صفحة جديدة عند الحاجة
+        if (y > pageHeight - 20) {
+            doc.addPage();
+            y = 20; // إعادة تعيين الموضع في الصفحة الجديدة
+        }
+    }
+
+    // إضافة العنوان الرئيسي `h1`
+    addMainTitle("Grille d’observation de l’Educateur");
+
+    // Rubrique 1
+    addH2Title("Rubrique 1 : Performance de l’éducateur (trice)");
+
+    // جمع معلومات المدخلات من قسم Educateur
+    document.querySelectorAll('.educateur input').forEach(input => {
+        const label = input.previousElementSibling ? input.previousElementSibling.innerText : 'N/A';
+        addH3Title(label);
+        const value = input.value ? input.value : "N/A";
+        addFieldValue(value);
+    });
+
+    // Comportements et Qualités personnels*
+    addH2Title("Comportements et Qualités personnels*");
+    document.querySelectorAll('.mt .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // Interaction avec les enfants*
+    addH2Title("Interaction avec les enfants*");
+    document.querySelectorAll('.interaction .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // Maitrise des pratiques professionnelles*
+    addH2Title("Maitrise des pratiques professionnelles*");
+    document.querySelectorAll('.pratiques .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // Les outils de l’éducateur*
+    addH2Title("Les outils de l’éducateur*");
+    document.querySelectorAll('.outils .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+    });
+
+    // Rubrique 2
+    addH2Title("Rubrique 2 : Organisation de la classe*");
+
+    // Coins de la classe*
+    addH2Title("Coins de la classe*");
+    addH2Title("Coins permanents");
+    document.querySelectorAll('.coins-permanents .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    addH2Title("Coins temporaires");
+    document.querySelectorAll('.coins-temporaires .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // Affichages de la classe*
+    addH2Title("Affichages de la classe*");
+    document.querySelectorAll('.affichages-didactiques .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+    });
+
+    // Affichages institutionnels
+    addH2Title("Affichages institutionnels");
+    document.querySelectorAll('.affichages-institutionnels .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // Organisation des moments de la journée*
+    addH2Title("Organisation des moments de la journée*");
+    document.querySelectorAll('.organisation-moments .radio').forEach(radioDiv => {
+        const label = radioDiv.querySelector('h3').innerText;
+        addH3Title(label);
+        const selected = radioDiv.querySelector('input:checked');
+        const value = selected ? selected.nextElementSibling.innerText : 'N/A';
+        addFieldValue(value);
+
+        const observation = radioDiv.querySelector('textarea');
+        if (observation && observation.value) {
+            addH3Title("Observation");
+            addFieldValue(observation.value);
+        }
+    });
+
+    // حفظ وتنزيل ملف PDF
+    doc.save('rapport_visite_educative.pdf');
+});
+//*************************** */
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="test.js"></script>
+
+</body>
+</html>

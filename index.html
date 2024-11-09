@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir un Rapport</title>
+    <style>
+        /* إعدادات التصميم العامة */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start; /* لجعل المحتوى يميل لليسار */
+            align-items: center;
+            height: 100vh;
+            background: url('idex.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding-left: 30px; /* ميلان قليلاً لليسار */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+
+        /* زر الأول - أخضر */
+        .btn-green {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: block; /* ليظهر كزر واحد */
+        }
+
+        .btn-green:hover {
+            background-color: #45a049;
+        }
+
+        /* زر الثاني - برتقالي */
+        .btn-orange {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: block; /* ليظهر كزر واحد */
+        }
+
+        .btn-orange:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Veuillez choisir un rapport</h1>
+        <a href="rapport1.html" class="btn-green">Grille d’observation de l’Educateur</a>
+        <a href="rapport2.html" class="btn-orange">Rapport de suivi</a>
+    </div>
+
+</body>
+</html>

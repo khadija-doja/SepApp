@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير الزيارة التربوية</title>
+    <!-- تحميل مكتبة jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dodo.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div id="titrep">
+                <h1>تقرير الزيارة التربوية</h1>
+                <h2>Grille d’observation de l’Educateur</h2>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="form-section">
+            <h1 id="titre2">Rubrique 1 : Performance de l’éducateur (trice)/أداء المُربي (ة)</h1>
+
+            <div class="input-group">
+                <label for="educateurName">Educateur (trice)/الاسم الكامل للمربي</label>
+                <input type="text" id="educateurName" placeholder="أدخل اسم المربي">
+            </div>
+
+            <div class="input-group">
+                <label for="visitDate">تاريخ الزيارة /Date de visite d’observation</label>
+                <input type="date" id="visitDate">
+            </div>
+
+            <div class="input-group">
+                <label for="visitTime">وقت الزيارة/Heure de visite</label>
+                <input type="time" id="visitTime">
+            </div>
+
+            <div class="input-group">
+                <label for="province">Province/الإقليم</label>
+                <input type="text" id="province" placeholder="أدخل الإقليم">
+            </div>
+
+            <button id="downloadPDF">تحميل PDF</button>
+        </div>
+    </div>
+
+    <!-- تضمين ملف JavaScript -->
+    <script src="test.js"></script>
+
+</body>
+</html>
